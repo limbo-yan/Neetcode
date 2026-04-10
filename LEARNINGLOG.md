@@ -12,3 +12,25 @@
    - `arr = [None] * 10`
    - `arr = [0 for _ in range(10)]`
 4. `ord()` in Python returns the Unicode code point of a character, so `ord('a') == 97`, which corresponds to Java's `(int) 'a'`.
+
+## April 10, 2026
+1. `enumerate()` in Python is used to loop over an iterable and get both the index and the element at the same time. It returns an enumerate object that produces pairs in the form `(index, element)`. This removes the need to manually maintain a counter variable during iteration.
+
+   Example:
+   ```python
+   a = ["Python", "Java", "C++"]
+   for i, v in enumerate(a):
+       print(i, v)
+   ```
+
+   Output:
+   ```text
+   0 Python
+   1 Java
+   2 C++
+   ```
+
+2. The standard syntax for slicing in Python is `array[start:stop:step]`:
+   - `start`: The index where the slice begins (inclusive). Defaults to `0`.
+   - `stop`: The index where the slice ends (exclusive). The element at this index is not included.
+   - `step`: The increment between elements. Defaults to `1`.
