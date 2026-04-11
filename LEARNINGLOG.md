@@ -34,3 +34,8 @@
    - `start`: The index where the slice begins (inclusive). Defaults to `0`.
    - `stop`: The index where the slice ends (exclusive). The element at this index is not included.
    - `step`: The increment between elements. Defaults to `1`.
+
+## April 10, 2026
+1. In Java, `Arrays.toString()` iterates through every element of the array exactly once, so the time complexity is **O(n)**.
+2. To sort a string alphabetically (ascending) in Python, we can use `sorted()` combined with `"".join()`.
+3. In Python, `defaultdict` is a subclass of the built-in `dict` class from the `collections` module. It automatically assigns a default value to keys that do not exist.
