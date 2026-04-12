@@ -22,15 +22,13 @@
    for i, v in enumerate(a):
        print(i, v)
    ```
-
    Output:
    ```text
    0 Python
    1 Java
    2 C++
    ```
-
-2. The standard syntax for slicing in Python is `array[start:stop:step]`:
+3. The standard syntax for slicing in Python is `array[start:stop:step]`:
    - `start`: The index where the slice begins (inclusive). Defaults to `0`.
    - `stop`: The index where the slice ends (exclusive). The element at this index is not included.
    - `step`: The increment between elements. Defaults to `1`.
@@ -38,4 +36,36 @@
 ## April 10, 2026
 1. In Java, `Arrays.toString()` iterates through every element of the array exactly once, so the time complexity is **O(n)**.
 2. To sort a string alphabetically (ascending) in Python, we can use `sorted()` combined with `"".join()`.
-3. In Python, `defaultdict` is a subclass of the built-in `dict` class from the `collections` module. It automatically assigns a default value to keys that do not exist.
+   ```python
+   "".join(sorted(s))
+   ```
+4. In Python, `defaultdict` is a subclass of the built-in `dict` class from the `collections` module. It automatically assigns a default value to keys that do not exist.
+   ```python
+   from collections import defaultdict
+
+   d = defaultdict(int)
+   d["a"] += 1   # no KeyError, automatically initializes to 0
+
+   # Common Use Cases
+   defaultdict(int)     # 0
+   defaultdict(list)    # []
+   defaultdict(set)     # set()
+   defaultdict(str)     # ""
+   ```
+   
+## April 11, 2026
+1. The expression `res |= (1 << i)` sets the **i-th bit** (0-indexed) of `res` to `1` while leaving all other bits unchanged. It is a common bitmask idiom:
+   - `1 << i` creates a mask with only the i-th bit set.
+   - `|=` applies that mask to set the bit in place.
+
+   In Python:
+   ```python
+   mask = 1 << i      # create
+   x |= mask          # set 1
+   x &= ~mask         # set 0
+   x ^= mask          # flip
+   (x & mask) != 0    # check
+   ```
+
+2. The Boyer-Moore Voting Algorithm finds a majority element (an element appearing more than `n / 2` times) in linear time and constant space:
+   - It tracks a candidate and counter; matching values increase the counter, differing values decrease it, effectively canceling out non-majority elements.
