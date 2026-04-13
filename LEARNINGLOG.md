@@ -69,3 +69,20 @@
 
 2. The Boyer-Moore Voting Algorithm finds a majority element (an element appearing more than `n / 2` times) in linear time and constant space:
    - It tracks a candidate and counter; matching values increase the counter, differing values decrease it, effectively canceling out non-majority elements.
+
+## April 12, 2026
+1. In Java, the `Arrays.fill()` method provides a quick and easy way to fill all or part of an array with a specific value. It is commonly used when you need to populate arrays with default values, which can save you time and code.
+   - `Arrays.fill(int[] a, int val)` fills the entire integer array with `val`.
+
+   ```java
+   int[] nums = new int[5];
+   Arrays.fill(nums, 7);
+   // nums = [7, 7, 7, 7, 7]
+   ```
+   - `Arrays.fill(int[] a, int fromIndex, int toIndex, int val)` fills the range `[fromIndex, toIndex)` with `val`.
+
+   ```java
+   int[] nums = {1, 2, 3, 4, 5};
+   Arrays.fill(nums, 1, 4, 9);
+   // nums = [1, 9, 9, 9, 5]
+   ```
