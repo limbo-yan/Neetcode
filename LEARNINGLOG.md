@@ -95,3 +95,6 @@
 | **Merge Sort** | **O(n log n)** (always) | Divide array into halves → recursively sort each half → merge sorted halves. | Stable; guaranteed **O(n log n)** performance. | Not in-place; uses extra memory. |
 | **Quick Sort** | Average: **O(n log n)**, Worst: **O(n²)** | Pick a pivot → partition elements around pivot → recursively sort partitions. | Very fast in practice; in-place in typical implementations. | Worst case exists if pivots are poor (usually mitigated with randomization). |
 | **Heap Sort** | **O(n log n)** (always) | Build a heap → repeatedly extract max/min to place elements in sorted order. | In-place; guaranteed **O(n log n)** performance. | Not stable; often slower than quicksort in practice. |
+
+## April 14, 2026
+1. Python swaps list elements in one line with simultaneous assignment (`arr[i], arr[j] = arr[j], arr[i]`): Python first evaluates and packs the right-hand values into a temporary tuple, then unpacks to the left-hand targets, so original values are preserved without needing a manual temp variable.
