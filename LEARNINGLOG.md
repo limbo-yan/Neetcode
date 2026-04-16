@@ -98,3 +98,18 @@
 
 ## April 14, 2026
 1. Python swaps list elements in one line with simultaneous assignment (`arr[i], arr[j] = arr[j], arr[i]`): Python first evaluates and packs the right-hand values into a temporary tuple, then unpacks to the left-hand targets, so original values are preserved without needing a manual temp variable.
+
+## April 15, 2026
+1. A Max-Heap is a data structure with the following properties:
+   - It is a **complete binary tree**.
+   - The value of the root node is the largest among all descendant nodes, and the same property holds for its left and right subtrees.
+
+2. A complete binary tree is a binary tree in which all levels are completely filled except possibly the lowest one, which is filled from the left.
+   - It is similar to a full binary tree, but with two key differences:
+     - All leaf elements must lean toward the left.
+     - The last leaf element might not have a right sibling, so a complete binary tree does not have to be a full binary tree.
+
+3. Array representation rules for a binary tree (0-indexed):
+   - If an element is at index `i`, its left child is at `2i + 1`.
+   - Its right child is at `2i + 2`.
+   - Its parent is at `floor((i - 1) / 2)`.
