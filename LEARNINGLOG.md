@@ -113,3 +113,45 @@
    - If an element is at index `i`, its left child is at `2i + 1`.
    - Its right child is at `2i + 2`.
    - Its parent is at `floor((i - 1) / 2)`.
+
+## April 17, 2026
+1. **Basic Priority Queue in Python (`heapq`)**
+   - Python’s standard library provides a min-heap via `heapq`, which is commonly used as a priority queue.
+   - Core operations:
+     - `heapq.heappush(heap, x)`: push item `x` into the heap.
+     - `heapq.heappop(heap)`: pop and return the smallest-priority item.
+     - `heap[0]`: inspect the current smallest item without popping.
+   - Typical complexities:
+     - Push: **O(log n)**
+     - Pop: **O(log n)**
+     - Peek (`heap[0]`): **O(1)**
+   - For a max-priority queue, push negative values (for numeric priorities) or store tuples with transformed priority.
+
+   ```python
+   import heapq
+
+   pq = []
+   heapq.heappush(pq, (2, "write tests"))
+   heapq.heappush(pq, (1, "fix bug"))
+   heapq.heappush(pq, (3, "refactor"))
+
+   while pq:
+       priority, task = heapq.heappop(pq)
+       print(priority, task)
+   # 1 fix bug
+   # 2 write tests
+   # 3 refactor
+   ```
+
+2. **Bucket Sort**
+   - Bucket sort distributes elements into a fixed number of buckets based on value ranges, sorts each bucket, then concatenates buckets.
+   - It works best when input values are uniformly distributed over a known range.
+   - High-level steps:
+     1. Create `k` empty buckets.
+     2. Map each element to a bucket by range/index formula.
+     3. Sort each bucket (often with insertion sort or built-in sort).
+     4. Concatenate buckets in order.
+   - Complexity:
+     - Average/best case: about **O(n + k)** when distribution is even.
+     - Worst case: **O(n²)** if many elements collapse into one bucket and that bucket uses quadratic sorting.
+   - Not ideal when distribution is highly skewed or range mapping is unclear.
