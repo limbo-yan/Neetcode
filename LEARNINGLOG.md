@@ -155,3 +155,28 @@
      - Average/best case: about **O(n + k)** when distribution is even.
      - Worst case: **O(n²)** if many elements collapse into one bucket and that bucket uses quadratic sorting.
    - Not ideal when distribution is highly skewed or range mapping is unclear.
+
+## April 19, 2026
+1. To convert a string to an integer in Python, use the built-in `int()` function by passing the string as an argument. If the string contains a valid base-10 integer representation, `int()` returns the corresponding integer value.
+
+   ```python
+   s = "123"
+   n = int(s)
+   print(n)  # 123
+   ```
+
+2. `map()` in Python applies a function to each item of an iterable and returns a lazy iterator of transformed results.
+   - Syntax: `map(function, iterable, ...)`
+   - Common pattern: wrap with `list()` to materialize values.
+   - It can take multiple iterables; in that case, the function must accept the same number of arguments, and iteration stops at the shortest iterable.
+
+   ```python
+   nums = [1, 2, 3, 4]
+   squares = list(map(lambda x: x * x, nums))
+   # [1, 4, 9, 16]
+
+   a = [1, 2, 3]
+   b = [10, 20, 30]
+   sums = list(map(lambda x, y: x + y, a, b))
+   # [11, 22, 33]
+   ```
