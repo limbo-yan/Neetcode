@@ -180,3 +180,6 @@
    sums = list(map(lambda x, y: x + y, a, b))
    # [11, 22, 33]
    ```
+
+## May 1, 2026
+1. **Cycle Sort** is an in-place, unstable, comparison-based sorting algorithm that minimizes memory writes. It works by identifying cycles of elements and rotating each cycle so every element moves directly to its correct index. Because each element is written at most once to its final position, Cycle Sort is especially useful when write operations are expensive.
